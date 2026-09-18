@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Muhammad Hashir — Microsoft Office, Graphic Design, Digital Marketing and Web skills portfolio.">
+<title>Muhammad Hashir | Creative Computer Professional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* =========================================================
+   FULL WEBSITE ANIMATIONS
+   ========================================================= */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Initial state for animated elements */
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+
+/* Visible state */
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Fade from left */
+.animate-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.animate-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* Fade from right */
+.animate-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.animate-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* Scale animation */
+.animate-scale {
+  opacity: 0;
+  transform: scale(0.85);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.animate-scale.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* =========================================================
+   HERO ANIMATION
+   ========================================================= */
+
+.hero h1 {
+  animation: heroTitle 1s ease forwards;
+}
+
+.hero p {
+  animation: heroText 1s ease 0.2s forwards;
+  opacity: 0;
+}
+
+.hero .btn {
+  animation: heroButtons 1s ease 0.4s forwards;
+  opacity: 0;
+}
+
+@keyframes heroTitle {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroText {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroButtons {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   PROFILE IMAGE
+   ========================================================= */
+
+.avatar {
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.06);
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.card,
+.project-card,
+.contact-box {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.card:hover,
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+
+/* =========================================================
+   BUTTON ANIMATION
+   ========================================================= */
+
+.btn {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   ICON ANIMATION
+   ========================================================= */
+
+.icon {
+  transition: transform 0.4s ease;
+}
+
+.card:hover .icon {
+  transform: scale(1.15) rotate(5deg);
+}
+
+
+/* =========================================================
+   PROJECT IMAGE ANIMATION
+   ========================================================= */
+
+.project-image {
+  transition: transform 0.5s ease;
+  overflow: hidden;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.03);
+}
+
+
+/* =========================================================
+   TAG ANIMATION
+   ========================================================= */
+
+.tags span {
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.tags span:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.section-head h2 {
+  transition: transform 0.4s ease;
+}
+
+.section-head:hover h2 {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   SKILL BARS
+   ========================================================= */
+
+.skill-bar {
+  overflow: hidden;
+}
+
+.skill-bar span {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.2s ease;
+}
+
+.skill-bar span.animate-bar {
+  transform: scaleX(1);
+}
+
+
+/* =========================================================
+   CATEGORY TITLES
+   ========================================================= */
+
+.category-title {
+  transition: transform 0.35s ease;
+}
+
+.category-title:hover {
+  transform: translateX(6px);
+}
+
+.category-icon {
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.category-title:hover .category-icon {
+  transform: rotate(-5deg) scale(1.08);
+}
+
+
+/* =========================================================
+   CONTACT BOX
+   ========================================================= */
+
+.contact-box:hover {
+  transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+   ========================================================= */
+
+nav a {
+  position: relative;
+  transition: opacity 0.25s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================================
+   FLOATING EFFECT
+   ========================================================= */
+
+.float {
+  animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+
+/* =========================================================
+   REDUCE ANIMATION FOR USERS WHO PREFER IT
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root{--bg:#080b12;--card:#101521;--text:#f5f7fb;--muted:#a9b1c2;--accent:#7c5cff;--accent2:#25d6a2;--border:#20283a;--max:1120px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:radial-gradient(circle at 80% 10%,#1a1540 0,transparent 32%),var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}.container{width:min(92%,var(--max));margin:auto}
+nav{position:sticky;top:0;z-index:10;background:rgba(8,11,18,.78);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:21px;font-weight:800}.logo span{color:var(--accent)}
+.links{display:flex;gap:25px;color:#cbd1df;font-size:14px}.links a:hover{color:white}
+.menu{display:none;background:none;border:0;color:white;font-size:26px}
+.hero{min-height:calc(100vh - 72px);display:grid;place-items:center;padding:80px 0}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:50px;align-items:center}
+.badge{display:inline-flex;padding:8px 13px;border:1px solid var(--border);background:#111725;border-radius:999px;color:#cdd3e1;font-size:13px;margin-bottom:20px}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.02;letter-spacing:-3px;margin-bottom:22px}
+.gradient{background:linear-gradient(100deg,#fff,#9d8cff 45%,#35e6b4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);max-width:650px;font-size:18px}
+.buttons{display:flex;gap:13px;margin-top:30px;flex-wrap:wrap}.btn{padding:13px 19px;border-radius:10px;font-weight:700;font-size:14px;border:1px solid var(--border);background:#111725}
+.btn.primary{background:var(--accent);border-color:var(--accent)}.btn:hover{transform:translateY(-2px)}
+.profile-card{background:linear-gradient(145deg,#151b2b,#0e131e);border:1px solid var(--border);border-radius:100px;padding:28px;box-shadow:0 25px 80px rgba(0,0,0,.35)}
+.avatar{height:220px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,#241d54,#102e2c);font-size:76px;font-weight:800}
+.profile-card h3{margin-top:20px;font-size:20px}.profile-card p{font-size:14px;margin-top:4px}
+section{padding:95px 0}.section-head{margin-bottom:35px}.eyebrow{color:var(--accent2);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+h2{font-size:38px;letter-spacing:-1.5px;margin-top:8px}.section-head p{color:var(--muted);max-width:650px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:rgba(16,21,33,.82);border:1px solid var(--border);border-radius:18px;padding:24px;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:#39435b}.icon{font-size:28px;margin-bottom:14px}.card h3{font-size:18px;margin-bottom:7px}.card p{color:var(--muted);font-size:14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.tag{font-size:11px;padding:6px 9px;border:1px solid var(--border);border-radius:7px;color:#cbd1df}
+.project{overflow:hidden;padding:0}.project-cover{height:170px;background:linear-gradient(135deg,#153d30,#17261e);display:grid;place-items:center;font-size:42px}.project:nth-child(2) .project-cover{background:linear-gradient(135deg,#332047,#17182e)}.project:nth-child(3) .project-cover{background:linear-gradient(135deg,#17364a,#141c2d)}
+.project-body{padding:22px}.project-body p{color:var(--muted);font-size:14px}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:18px}.skill{margin-bottom:18px}.skill-top{display:flex;justify-content:space-between;font-size:14px;margin-bottom:7px}.bar{height:7px;background:#1b2231;border-radius:10px;overflow:hidden}.fill{height:100%;width:80%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:10px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:25px}.contact-box{background:#101521;border:1px solid var(--border);border-radius:20px;padding:28px}.contact-box p{color:var(--muted);margin:8px 0 20px}
+.contact-box {
+  margin-top: 50px;
+}
+.contact-box {
+  margin-top: 45px;
+}
+footer{border-top:1px solid var(--border);padding:30px 0;color:#8f98aa;font-size:13px;text-align:center}
+@media(max-width:800px){.links{display:none}.menu{display:block}.hero-grid,.contact,.skills{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}h1{letter-spacing:-2px}.hero{padding:60px 0}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}section{padding:70px 0}.avatar{height:180px}}
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+/* ================= PROJECT CATEGORIES ================= */
+
+.project-category {
+  margin-top: 80px;
+}
+
+.category-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.category-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.05);
+  font-size: 24px;
+}
+
+.category-title h3 {
+  margin: 4px 0 0;
+  font-size: 24px;
+}
+
+
+/* PROJECT GRID */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+
+/* PROJECT CARD */
+
+.project-card {
+  background: #0f131d;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,0.15);
+}
+
+
+/* PROJECT IMAGE */
+
+.project-image {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.excel-bg {
+  background: linear-gradient(135deg, #073b2a, #105b42);
+}
+
+.word-bg {
+  background: linear-gradient(135deg, #123b67, #155b91);
+}
+
+.powerpoint-bg {
+  background: linear-gradient(135deg, #71300e, #a64b19);
+}
+
+.design-bg {
+  background: linear-gradient(135deg, #32194e, #4e2673);
+}
+
+.web-bg {
+  background: linear-gradient(135deg, #12384e, #164e68);
+}
+
+.marketing-bg {
+  background: linear-gradient(135deg, #183c5a, #205b78);
+}
+
+
+/* PROJECT CONTENT */
+
+.project-content {
+  padding: 20px;
+}
+
+.project-content h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.project-content p {
+  margin: 0 0 15px;
+  line-height: 1.6;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+
+/* TAGS */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tags span {
+  padding: 5px 9px;
+  border-radius: 6px;
+  font-size: 11px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-category {
+    margin-top: 60px;
+  }
+
+  .category-title h3 {
+    font-size: 21px;
+  }
+
+  .project-image {
+    height: 160px;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav><div class="container nav">
+<a class="logo" href="#home">Hashir<span>.</span></a>
+<div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+<button class="menu" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+</div></nav>
+
+<main>
+<section class="hero" id="home"><div class="container hero-grid">
+<div>
+<div class="badge">Available for entry-level opportunities & freelance work</div>
+<h1>Hi, I'm <span class="gradient">Muhammad Hashir.</span></h1>
+<p>I create professional documents, spreadsheets, presentations, graphics and digital marketing content — combining practical computer skills with creativity. Completed Intermediate Commerce and Enrolled in BBA (Bachlors of science in Business Administration) in Virtual University of Pakistan.</p>
+<div class="buttons">
+    <a class="btn primary" href="#projects">View My Work</a>
+     <a class="btn primary" href="https://drive.google.com/file/d/1n6TZGc9xfsIRj0_rf8HkgE-Qa7Qijkmv/view?usp=drivesdk">Watch My CV</a>
+    <a class="btn primary" href="#contact">Let's Connect</a>
+</div>
+</div> 
+<div class="profile-card">
+  <div class="avatar">
+    <img src="profile .jpg" alt="Profile Photo">
+  </div>
+
+  <h3>Computer & Creative Professional</h3>
+  <p>MS Office • Graphic Design • Digital Marketing • HTML</p>
+</div>
+</div></section>
+
+<!-- Introduction -->
+
+<section id="skills"><div class="container"><div class="section-head"><div class="eyebrow">My skills</div><h2>Tools I work with</h2></div>
+<div class="skills"><div><div class="skill"><div class="skill-top"><span>Microsoft Office</span><b>90%</b></div><div class="bar"><div class="fill" style="width:90%"></div></div></div><div class="skill"><div class="skill-top"><span>Graphic Design</span><b>85%</b></div><div class="bar"><div class="fill" style="width:85%"></div></div></div><div class="skill"><div class="skill-top"><span>Digital Marketing</span><b>80%</b></div><div class="bar"><div class="fill" style="width:80%"></div></div></div></div>
+<div><div class="skill"><div class="skill-top"><span>HTML / Basic Web</span><b>70%</b></div><div class="bar"><div class="fill" style="width:70%"></div></div></div><div class="skill"><div class="skill-top"><span>Canva / Creative Tools</span><b>85%</b></div><div class="bar"><div class="fill" style="width:85%"></div></div></div><div class="skill"><div class="skill-top"><span>Computer Operations</span><b>85%</b></div><div class="bar"><div class="fill" style="width:85%"></div></div></div></div></div>
+<div class="tags"><span class="tag">Excel</span><span class="tag">Word</span><span class="tag">PowerPoint</span><span class="tag">Photoshop</span><span class="tag">Illustrator</span><span class="tag">Canva</span><span class="tag">ChatGPT</span><span class="tag">HTML</span></div>
+</div></section>
+
+
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">About me</div>
+      <h2>Practical skills. Creative work. Professional results.</h2>
+      <p>
+        I'm building my career around computer operations, office productivity,
+        graphic design, web development and digital marketing. I enjoy turning
+        ideas, information and business requirements into clean, organized and
+        professional digital work.
+      </p>
+    </div>
+
+    <div class="grid">
+
+     
+
+      <!-- Graphic Design -->
+      <div class="card">
+        <div class="icon">🎨</div>
+        <h3>Graphic Design</h3>
+        <p>
+          Designing professional and attractive visual content for businesses,
+          brands and social media using Adobe Photoshop, Adobe Illustrator and
+          Canva.
+        </p>
+        <p>
+          <strong>Branding:</strong> Logos, brand elements, business stationery
+          and visual identity designs.
+        </p>
+        <p>
+          <strong>Print Design:</strong> Letterheads, visiting cards, envelopes,
+          file covers, notepads, ID cards, posters, flyers, brochures, standees,
+          calendars and other promotional materials.
+        </p>
+        <p>
+          <strong>Digital Design:</strong> Social media posts, banners, YouTube
+          banners, advertising graphics, mockups and other digital content.
+        </p>
+      </div>
+
+       <!-- MS Office -->
+      <div class="card">
+        <div class="icon">📊</div>
+        <h3>MS Office</h3>
+        <p>
+          <strong>MS Excel:</strong> Creating and formatting spreadsheets,
+          organizing data, using formulas and functions, applying filters,
+          sorting data, creating charts and preparing professional worksheets.
+        </p>
+        <p>
+          <strong>MS Word:</strong> Creating professional documents, resumes,
+          letters, reports, tables, forms and properly formatted business
+          documents with headings, layouts and page formatting.
+        </p>
+        <p>
+          <strong>MS PowerPoint:</strong> Designing professional presentations
+          with organized layouts, text, images, animations, transitions and
+          visually attractive slides.
+        </p>
+        <p>
+          <strong>MS Outlook:</strong> Managing emails, contacts, calendars,
+          appointments and basic professional communication and organization.
+        </p>
+      </div>
+
+
+      <!-- Web Development -->
+      <div class="card">
+        <div class="icon">💻</div>
+        <h3>Web Development</h3>
+        <p>
+          Creating clean and responsive basic websites using HTML, CSS and
+          JavaScript with a focus on professional design, usability and
+          mobile-friendly layouts.
+        </p>
+        <p>
+          Developing website sections such as Home, About, Services, Projects
+          and Contact pages with organized content and modern layouts.
+        </p>
+        <p>
+          <strong>Website Skills:</strong> HTML structure, CSS styling,
+          responsive layouts, navigation menus, buttons, forms, animations,
+          basic JavaScript interactions and website customization.
+        </p>
+        <p>
+          <strong>Tools:</strong> Visual Studio Code, GitHub and GitHub Pages
+          for creating, managing and publishing websites.
+        </p>
+      </div>
+
+      <!-- Digital Marketing -->
+      <div class="card">
+        <div class="icon">📈</div>
+        <h3>Digital Marketing</h3>
+        <p>
+          Creating and managing digital marketing content to help businesses
+          improve their online presence and reach their target audience.
+        </p>
+        <p>
+          <strong>Social Media:</strong> Facebook and Instagram content,
+          promotional posts, page management and basic social media strategy.
+        </p>
+        <p>
+          <strong>Advertising:</strong> Creating and managing Facebook and
+          Instagram advertising campaigns, selecting audiences, setting
+          campaign objectives and monitoring basic campaign performance.
+        </p>
+        <p>
+          <strong>Freelancing & Online Work:</strong> Understanding client
+          requirements, preparing digital content and presenting services
+          professionally for online platforms.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">SELECTED WORK</div>
+      <h2>Projects & Skills</h2>
+      <p>
+        A collection of my practical work and skills across MS Office,
+        graphic design, web development and digital marketing.
+      </p>
+    </div>
+
+
+    <!-- =====================================================
+         MS OFFICE
+         ===================================================== -->
+
+    <div class="project-category">
+
+      <div class="category-title">
+        <span class="category-icon">📊</span>
+        <div>
+          <div class="eyebrow">MS OFFICE</div>
+          <h3>Office & Productivity Projects</h3>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+
+
+        <!-- WORD RESUME -->
+        <div class="project-card">
+          <div class="project-image word-bg">📄</div>
+
+          <div class="project-content">
+            <h3>Professional Resume</h3>
+
+            <p>
+              Professionally formatted resume created in Microsoft Word
+              with structured sections, clean typography, page layout,
+              alignment and organized content.
+            </p>
+
+            <div class="tags">
+              <span>MS Word</span>
+              <span>Formatting</span>
+              <span>Resume</span>
+            </div>
+
+            <a class="btn primary"
+               href="https://drive.google.com/file/d/17EHCQgI7rXy7o0pZzFmgWh--limZc3Lg/view?usp=drivesdk"
+               target="_blank">
+              View Project
+            </a>
+          </div>
+        </div>
+
+
+        <!-- WORD TABLES -->
+        <div class="project-card">
+          <div class="project-image word-bg">📋</div>
+
+          <div class="project-content">
+            <h3>Professional Tables</h3>
+
+            <p>
+              Created organized tables in Microsoft Word with proper
+              alignment, borders, spacing, formatting and structured
+              information presentation.
+            </p>
+
+            <div class="tags">
+              <span>MS Word</span>
+              <span>Tables</span>
+              <span>Formatting</span>
+            </div>
+
+            <a class="btn primary"
+               href="https://drive.google.com/file/d/1DRjhMWyiIRjsmvyIsiE1tfJq9I6GXUKM/view?usp=drivesdk"
+               target="_blank">
+              View Project
+            </a>
+          </div>
+        </div>
+
+
+        <!-- ENGLISH BOOK CHAPTER -->
+        <div class="project-card">
+          <div class="project-image word-bg">📖</div>
+
+          <div class="project-content">
+            <h3>English Book Chapter</h3>
+
+            <p>
+              Designed and formatted an English book chapter using
+              Microsoft Word with structured headings, paragraphs,
+              spacing, page layout and professional document formatting.
+            </p>
+
+            <div class="tags">
+              <span>MS Word</span>
+              <span>Document</span>
+              <span>Layout</span>
+            </div>
+
+            <a class="btn primary"
+               href="https://drive.google.com/file/d/120RzhywGOCjwFBPnN3yeEKeMm2eU0VUb/view?usp=drivesdk"
+               target="_blank">
+              View Project
+            </a>
+          </div>
+        </div>
+
+
+        <!-- LETTER -->
+        <div class="project-card">
+          <div class="project-image word-bg">✉️</div>
+
+          <div class="project-content">
+            <h3>Professional Letter</h3>
+
+            <p>
+              Created professionally formatted letters using proper
+              document structure, spacing, alignment, headings and
+              business-style formatting.
+            </p>
+
+            <div class="tags">
+              <span>MS Word</span>
+              <span>Letters</span>
+              <span>Formatting</span>
+            </div>
+
+            <a class="btn primary"
+               href="https://drive.google.com/file/d/17_pA1_cqmNe8x_NrSvWGM8sVNY4m4TDk/view?usp=drivesdk"
+               target="_blank">
+              View Project
+            </a>
+          </div>
+        </div>
+
+
+        <!-- SHAPE CARDS -->
+        <div class="project-card">
+          <div class="project-image word-bg">🔷</div>
+
+          <div class="project-content">
+            <h3>Shape Cards</h3>
+
+            <p>
+              Created creative cards using Microsoft Word shapes,
+              text formatting, alignment, colors and layout tools
+              to produce visually organized designs.
+            </p>
+
+            <div class="tags">
+              <span>MS Word</span>
+              <span>Shapes</span>
+              <span>Design</span>
+            </div>
+
+            <a class="btn primary"
+               href="https://drive.google.com/file/d/1pOrRO396VflGE6xScbcculN3MmGJtMwJ/view?usp=drivesdk"
+               target="_blank">
+              View Project
+            </a>
+          </div>
+        </div>
+
+
+        <!-- COVER PAGE -->
+        <div class="project-card">
+          <div class="project-image word-bg">📘</div>
+
+          <div class="project-content">
+            <h3>Document Cover Page</h3>
+
+            <p>
+              Designed an attractive document cover page using Microsoft
+              Word with professional typography, spacing, alignment,
+              shapes and visual elements.
+            </p>
+
+            <div class="tags">
+              <span>MS Word</span>
+              <span>Cover Page</span>
+              <span>Layout</span>
+            </div>
+
+            <a class="btn primary"
+               href="https://drive.google.com/file/d/1zm9AkEjxTV3wiE8Fc0-bukyUSNXIWBhP/view?usp=drivesdk"
+               target="_blank">
+              View Project
+            </a>
+          </div>
+        </div>
+
+
+      <!-- ==================== EXCEL SKILLS ==================== -->
+
+<!-- EXCEL: SPREADSHEETS & FORMATTING -->
+<div class="project-card">
+  <div class="project-image excel-bg">📊</div>
+
+  <div class="project-content">
+    <h3>Excel Spreadsheets & Formatting</h3>
+
+    <p>
+      Creating professional spreadsheets, organizing data, formatting
+      worksheets, adjusting rows and columns, applying borders, styles,
+      number formats and clean layouts.
+    </p>
+
+    <div class="tags">
+      <span>Excel</span>
+      <span>Formatting</span>
+      <span>Data Organization</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- EXCEL: BASIC FORMULAS -->
+<div class="project-card">
+  <div class="project-image excel-bg">➕</div>
+
+  <div class="project-content">
+    <h3>Basic Excel Formulas</h3>
+
+    <p>
+      Working with commonly used formulas such as SUM, AVERAGE, COUNT,
+      MIN, MAX and basic arithmetic calculations for accurate data analysis.
+    </p>
+
+    <div class="tags">
+      <span>SUM</span>
+      <span>AVERAGE</span>
+      <span>COUNT</span>
+      <span>MIN</span>
+      <span>MAX</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- EXCEL: LOGICAL FORMULAS -->
+<div class="project-card">
+  <div class="project-image excel-bg">🔢</div>
+
+  <div class="project-content">
+    <h3>Logical & Conditional Formulas</h3>
+
+    <p>
+      Using logical and conditional formulas to analyze information,
+      check conditions and automatically return useful results.
+    </p>
+
+    <div class="tags">
+      <span>IF</span>
+      <span>COUNTIF</span>
+      <span>SUMIF</span>
+      <span>Conditions</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- EXCEL: LOOKUP -->
+<div class="project-card">
+  <div class="project-image excel-bg">🔎</div>
+
+  <div class="project-content">
+    <h3>Lookup & Data Matching</h3>
+
+    <p>
+      Using lookup functions to find and match information between
+      different rows, columns and data tables.
+    </p>
+
+    <div class="tags">
+      <span>VLOOKUP</span>
+      <span>Data Matching</span>
+      <span>Lookup</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- EXCEL: DATA CLEANING -->
+<div class="project-card">
+  <div class="project-image excel-bg">🧹</div>
+
+  <div class="project-content">
+    <h3>Data Cleaning & Organization</h3>
+
+    <p>
+      Cleaning and organizing spreadsheets by correcting inconsistent
+      data, removing unnecessary information, sorting records and
+      applying filters for easier data management.
+    </p>
+
+    <div class="tags">
+      <span>Data Cleaning</span>
+      <span>Sorting</span>
+      <span>Filtering</span>
+      <span>Organization</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- EXCEL: CHARTS -->
+<div class="project-card">
+  <div class="project-image excel-bg">📈</div>
+
+  <div class="project-content">
+    <h3>Charts & Data Visualization</h3>
+
+    <p>
+      Creating charts from spreadsheet data to present information
+      clearly and make reports easier to understand.
+    </p>
+
+    <div class="tags">
+      <span>Charts</span>
+      <span>Reports</span>
+      <span>Visualization</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- EXCEL: TEMPLATES -->
+<div class="project-card">
+  <div class="project-image excel-bg">📋</div>
+
+  <div class="project-content">
+    <h3>Custom Excel Templates</h3>
+
+    <p>
+      Creating organized Excel templates for budgets, attendance,
+      invoices, timesheets, inventory, sales reports and academic
+      mark sheets.
+    </p>
+
+    <div class="tags">
+      <span>Templates</span>
+      <span>Reports</span>
+      <span>Invoices</span>
+      <span>Inventory</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ==================== POWERPOINT SKILLS ==================== -->
+
+<!-- POWERPOINT: PRESENTATION DESIGN -->
+<div class="project-card">
+  <div class="project-image powerpoint-bg">📽️</div>
+
+  <div class="project-content">
+    <h3>Presentation Design</h3>
+
+    <p>
+      Creating professional PowerPoint presentations with clean layouts,
+      organized content, suitable images, text, shapes and consistent
+      slide designs.
+    </p>
+
+    <div class="tags">
+      <span>PowerPoint</span>
+      <span>Slide Design</span>
+      <span>Layouts</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- POWERPOINT: ANIMATIONS -->
+<div class="project-card">
+  <div class="project-image powerpoint-bg">✨</div>
+
+  <div class="project-content">
+    <h3>Animations</h3>
+
+    <p>
+      Adding and organizing animations for text, images, shapes and
+      other presentation elements to make slides more engaging.
+    </p>
+
+    <div class="tags">
+      <span>Animations</span>
+      <span>Text Effects</span>
+      <span>Object Effects</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- POWERPOINT: TRANSITIONS -->
+<div class="project-card">
+  <div class="project-image powerpoint-bg">🔄</div>
+
+  <div class="project-content">
+    <h3>Slide Transitions</h3>
+
+    <p>
+      Applying suitable slide transitions and timing to create smooth
+      movement between presentation slides.
+    </p>
+
+    <div class="tags">
+      <span>Transitions</span>
+      <span>Timing</span>
+      <span>Slide Effects</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- POWERPOINT: VISUAL CONTENT -->
+<div class="project-card">
+  <div class="project-image powerpoint-bg">🎨</div>
+
+  <div class="project-content">
+    <h3>Visual Presentation Content</h3>
+
+    <p>
+      Combining text, images, shapes, icons and other visual elements
+      to create clear and attractive presentation slides.
+    </p>
+
+    <div class="tags">
+      <span>Images</span>
+      <span>Shapes</span>
+      <span>Icons</span>
+      <span>Design</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- POWERPOINT: PROFESSIONAL LAYOUTS -->
+<div class="project-card">
+  <div class="project-image powerpoint-bg">📐</div>
+
+  <div class="project-content">
+    <h3>Professional Slide Layouts</h3>
+
+    <p>
+      Creating well-organized slide layouts with proper spacing,
+      alignment, visual hierarchy and consistent formatting throughout
+      the presentation.
+    </p>
+
+    <div class="tags">
+      <span>Alignment</span>
+      <span>Hierarchy</span>
+      <span>Formatting</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- POWERPOINT: PRESENTATION CONTENT -->
+<div class="project-card">
+  <div class="project-image powerpoint-bg">📝</div>
+
+  <div class="project-content">
+    <h3>Presentation Content & Structure</h3>
+
+    <p>
+      Structuring presentation content into clear slides with headings,
+      bullet points, supporting visuals and an easy-to-follow flow.
+    </p>
+
+    <div class="tags">
+      <span>Content</span>
+      <span>Structure</span>
+      <span>Bullet Points</span>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+
+
+    <!-- =====================================================
+         GRAPHIC DESIGN
+         ===================================================== -->
+
+    <div class="project-category">
+
+      <div class="category-title">
+        <span class="category-icon">🎨</span>
+
+        <div>
+          <div class="eyebrow">GRAPHIC DESIGN</div>
+          <h3>Creative Design Projects</h3>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+
+
+        <!-- CUSTOM LOGOS -->
+        <div class="project-card">
+          <div class="project-image design-bg">✒️</div>
+
+          <div class="project-content">
+            <h3>Custom Logo Design</h3>
+
+            <p>
+              Custom logo concepts designed with attention to branding,
+              typography, visual identity, composition and professional
+              presentation.
+            </p>
+
+            <div class="tags">
+              <span>Illustrator</span>
+              <span>Photoshop</span>
+              <span>Branding</span>
+            </div>
+
+            <a class="btn primary"
+               href="https://drive.google.com/file/d/15x8p_Rbp_EXYvjjx2ACYVbroUMBugtl8/view?usp=drivesdk"
+               target="_blank">
+              View Projects
+            </a>
+          </div>
+        </div>
+
+
+        <!-- STATIONERY -->
+        <div class="project-card">
+          <div class="project-image design-bg">💼</div>
+
+          <div class="project-content">
+            <h3>Business Stationery</h3>
+
+            <p>
+              Complete business stationery designs including letterhead,
+              visiting card, envelope, file cover, office ID card and
+              notepad with a consistent professional identity.
+            </p>
+
+            <div class="tags">
+              <span>Letterhead</span>
+              <span>Visiting Card</span>
+              <span>Envelope</span>
+          
+              <span>Branding</span>
+            </div>
+
+            <a class="btn primary"
+               href="https://drive.google.com/file/d/11CsqjZvZDa6KOX7ULzcTk9DviFqk9RWX/view?usp=drivesdk
+"
+               target="_blank">
+              View Projects
+            </a>
+          </div>
+        </div>
+
+
+        <!-- PROMOTIONAL DESIGN -->
+        <div class="project-card">
+          <div class="project-image design-bg">📢</div>
+
+          <div class="project-content">
+            <h3>Promotional Designs</h3>
+
+            <p>
+              Promotional graphics including posters, flyers, billboards,
+              social media posts and standee designs created for
+              advertising and visual communication.
+            </p>
+
+            <div class="tags">
+              <span>Poster</span>
+              <span>Flyer</span>
+              <span>Billboard</span>
+              <span>Standee</span>
+            </div>
+
+            <a class="btn primary"
+               href="https://drive.google.com/file/d/1xqyAKn75Xp_Qm6YqxtSZ7B0vPCd318aY/view?usp=drivesdk"
+               target="_blank">
+              View Projects
+            </a>
+          </div>
+        </div>
+
+
+      
+
+
+       
+      </div>
+    </div>
+
+
+
+    <!-- =====================================================
+         WEB DEVELOPMENT
+         ===================================================== -->
+
+    <div class="project-category">
+
+      <div class="category-title">
+        <span class="category-icon">💻</span>
+
+        <div>
+          <div class="eyebrow">WEB DEVELOPMENT</div>
+          <h3>Web Projects</h3>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+
+
+        <!-- HISHEET -->
+        <div class="project-card">
+
+          <div class="project-image web-bg">🌐</div>
+
+          <div class="project-content">
+
+            <h3>HiSheet Website</h3>
+
+            <p>
+              A business website created for HiSheet Excel Services,
+              showcasing services, projects and professional information
+              with a responsive and modern web layout.
+            </p>
+
+            <div class="tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>GitHub Pages</span>
+            </div>
+
+            <a class="btn primary"
+               href="https://hisheet.github.io/hisheet/"
+               target="_blank">
+              View Website
+            </a>
+
+          </div>
+        </div>
+
+
+        <!-- PORTFOLIO -->
+        <div class="project-card">
+
+          <div class="project-image web-bg">💼</div>
+
+          <div class="project-content">
+
+            <h3>Personal Portfolio Website</h3>
+
+            <p>
+              Personal portfolio website designed to showcase my
+              professional skills, creative projects, web development
+              work, services and contact information.
+            </p>
+
+            <div class="tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Responsive</span>
+            </div>
+
+            <a class="btn primary"
+               href="#Introduction"
+               target="_blank">
+              View Website
+            </a>
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+    <!-- =====================================================
+         DIGITAL MARKETING
+         ===================================================== -->
+
+    <div class="project-category">
+
+      <div class="category-title">
+
+        <span class="category-icon">📈</span>
+
+        <div>
+          <div class="eyebrow">DIGITAL MARKETING</div>
+          <h3>Marketing & Advertising Skills</h3>
+        </div>
+
+      </div>
+
+
+      <div class="projects-grid">
+
+
+        <!-- META ADS -->
+        <div class="project-card">
+
+          <div class="project-image marketing-bg">📢</div>
+
+          <div class="project-content">
+
+            <h3>Meta Advertising</h3>
+
+            <p>
+              Creating and managing Facebook and Instagram advertising
+              campaigns, including campaign objectives, audience targeting,
+              ad creatives, placements, budgets and basic performance
+              monitoring.
+            </p>
+
+            <div class="tags">
+              <span>Meta Ads</span>
+              <span>Facebook</span>
+              <span>Instagram</span>
+            </div>
+
+            
+          </div>
+        </div>
+
+
+        <!-- SOCIAL MEDIA -->
+        <div class="project-card">
+
+          <div class="project-image marketing-bg">📱</div>
+
+          <div class="project-content">
+
+            <h3>Social Media Content</h3>
+
+            <p>
+              Creating promotional social media posts, captions,
+              visual content and marketing creatives for platforms
+              such as Facebook and Instagram.
+            </p>
+
+            <div class="tags">
+              <span>Social Media</span>
+              <span>Content</span>
+              <span>Canva</span>
+            </div>
+
+
+          </div>
+        </div>
+
+
+        <!-- CAMPAIGN CREATIVE -->
+        <div class="project-card">
+
+          <div class="project-image marketing-bg">🎯</div>
+
+          <div class="project-content">
+
+            <h3>Ad Creative & Campaign Content</h3>
+
+            <p>
+              Designing advertising creatives and promotional content
+              for digital campaigns, combining visual design, marketing
+              messaging and audience-focused content.
+            </p>
+
+            <div class="tags">
+              <span>Ad Creative</span>
+              <span>Marketing</span>
+              <span>Content</span>
+            </div>
+
+          
+
+          </div>
+        </div>
+
+
+        <!-- DIGITAL STRATEGY -->
+        <div class="project-card">
+
+          <div class="project-image marketing-bg">📊</div>
+
+          <div class="project-content">
+
+            <h3>Digital Marketing Support</h3>
+
+            <p>
+              Supporting online business promotion through social media
+              content, advertising creatives, audience research,
+              campaign planning and basic digital marketing activities.
+            </p>
+
+            <div class="tags">
+              <span>Digital Marketing</span>
+              <span>Research</span>
+              <span>Campaigns</span>
+            </div>
+
+           
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="contact">
+  <div class="container">
+
+    <div class="contact">
+
+      <div>
+        <div class="eyebrow">Contact</div>
+
+        <h2>Let's work together.</h2>
+
+        <p style="color:var(--muted);margin-top:12px">
+          I'm open to suitable office, computer-related and freelance opportunities.
+        </p>
+      </div>
+
+      <div class="contact-box">
+        <h3>Get in touch</h3>
+
+        <a class="btn primary" href="mailto:muhammadhashir332007@gmail.com">
+          Email Me
+        </a>
+
+        <a class="btn primary" href="tel:+923190345286">
+          Call Me
+        </a>
+        
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+</main>
+<footer>© 2026 Muhammad Hashir. Built with HTML & CSS.</footer>
+<script>
+function toggleMenu(){const l=document.querySelector('.links');l.style.display=l.style.display==='flex'?'none':'flex';if(l.style.display==='flex'){l.style.position='absolute';l.style.top='72px';l.style.right='4%';l.style.flexDirection='column';l.style.background='#101521';l.style.padding='18px';l.style.border='1px solid #20283a';l.style.borderRadius='12px'}}
+</script>
+</body>
+</html>
